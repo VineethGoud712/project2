@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            html{
+                background-color:rgb(15, 6, 92);
+            }
+                div{
+                    background-color:rgb(4, 4, 29) 121, 158);
+                    width:400px;
+                    height:250px;
+                }
+                span{
+                    position:absolute;
+                    left:440px;
+                }
+                i{
+                    padding:5px;
+                    font-size:20px;
+                }
+                input{
+                    font-size:20px;
+                    color:black;
+                    width:300px;
+                    height:30px;
+                    border:1px solid lightblue;
+                    border-radius:5px;
+                }
+                td{
+                    padding:5px;
+                    font-size:18px;
+                    color:white;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                center{
+                    padding: 200px;
+                }
+                button{
+                    font-size: 17px;
+                    width:300px;
+                    height:30px;
+                    border:none;
+                    color:white;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    background-color: rgb(12, 12, 247);
+                }
+               
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <div>
+                <table>
+                <tr><td>USERNAME:<br><input type="email" placeholder="Enter Email"  id="a" ></td></tr>
+                <tr><td><p id="demo"></p></td></tr>
+                <tr><td>PASSWORD:<br><input type="password" placeholder="Enter Password"  id="b"></td></tr>
+                <tr><td><p id="demo1"></p></td></tr>
+               <tr><td> <button  onclick="myFun()">sign in</button></td></tr>
+                </table>
+        </div>
+        </center>
+        <script>
+            function myFun(){
+                var email = document.getElementById("a").value;
+                var pass = document.getElementById("b").value;
+                if(email ==""){
+                    document.getElementById("demo").innerHTML="*fill out the filed";
+                    document.getElementById("demo").style.color="red";
+                    document.getElementById("a").style.border="2px solid red";
+                }else if(email !=="vineethganagoni@gmail.com"){
+                    document.getElementById("demo").innerHTML="*invalid email";
+                    document.getElementById("demo").style.color="red";
+                    document.getElementById("a").style.border="2px solid red";
+                }else if(pass ==""){
+                    document.getElementById("demo1").innerHTML="*fill out the filed";
+                    document.getElementById("demo1").style.color="red";
+                    document.getElementById("b").style.border="2px solid red";
+
+                }else if(pass!=="12345678@A"){
+                    document.getElementById("demo1").innerHTML="*incorrect password";
+                    document.getElementById("demo1").style.color="red";
+                    document.getElementById("b").style.border="2px solid red";
+                }else{
+                    alert("login successfully");
+                }
+               
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            html{
+                background: url("C:/Users/vidya/Downloads/g.jpg")  no-repeat center fixed;
+                background-size: cover;
+                opacity: 1;
+            }
+            label{
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-transform: capitalize;
+            }
+            div{
+                padding:300 0 0 600;  
+            }
+            input{
+                background-color:whitesmoke;
+                border:1px solid black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <form>
+               <label>EMAIL:</label> <input type="email" name="email" required><br><br>
+               <label>PASSWORD:</label> <input type="password" name="password" id="b"><p id="demo"></p><br><br>
+                <button onclick="myF()" >submit</button>
+            </form>
+        </div>
+        <script>
+            function myF(){
+                var a = document.getElementById("b").value;
+                if(a == ""){
+                    document.getElementById("demo").innerHTML="fill out the filed";
+                    document.getElementById("demo").style.color="red";
+                }else if(a.search(/[A-Z]/)== -1){
+                    document.getElementById("demo").innerHTML="atleast one cap letter";
+                }
+            }
+        </script>
+
+    </body>
+</html>

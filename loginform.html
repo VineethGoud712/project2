@@ -1,0 +1,30 @@
+<html>
+    <body>
+        
+            <label>FristName:</label><br>
+            <input type="text" name="fname" id="a"><br>
+            <p id ="demo"></p>
+            <label>LastName:</label><br>
+            <input type="text" name="lname" id="b"><br>
+            <label>Email:</label><br>
+            <input type="email" name="fname" id="c"><br>
+            <label>Password:</label><br>
+            <input type="password" name="fname" id="d"><br>
+            <label>Conform Password:</label><br>
+            <input type="password" name="fname" id="e"><br>
+            <label>Gender:</label>
+            <input type="radio" name="gender">Male <input type="radio" name="gender">Female <br>
+            <input type="checkbox"><span>i accept the<b> Terms of use && privacy policy</b></span><br>
+            <button type="submit" onclick="myF();">Register Now</button>
+
+        
+        <script>
+            function myF(){
+                var fname = document.getElementById("a").value;
+                if(fname==""){
+                    document.getElementById("demo").innerHTML="fill out the filed";
+                }
+            }
+        </script>
+    </body>
+</html>

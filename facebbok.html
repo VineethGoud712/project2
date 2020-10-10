@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color:darkblue;
+                opacity: 1;
+            }
+            i{
+                position: absolute;
+                top:41.5%;
+                left:56%;
+            }
+            div{
+                margin: 10% 40% ;
+            }
+            h1{
+                font-size:50px;
+                color:white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                letter-spacing: 2px;
+            }
+            input{
+                width:270px;
+                height:30px;
+                border:none;
+                outline:none;
+                border-radius:2px;
+                letter-spacing: 1px;
+            }
+            button{
+                width:270px;
+                height:30px;
+                background-color:blue;
+                color:white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border:2px solid blue;
+                opacity: 0.5;
+            }
+            a{
+                color:whitesmoke;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>facebook</h1>
+            <input type ="email" id ="email" placeholder="Email" required><br>
+            <p id ="demo1"></p>
+            <input type = "password" id= "pass" placeholder="Password "><i class = "fa fa-eye" aria-hidden="true"  onclick="toggle();"></i><br><br>
+            <p id ="demo2"></p>
+            <p id ="demo3"></p>
+            <button type="submit" onclick="myF();" >Login</button><br><br>
+            
+            <a href="#">Forgot Password</a>
+        </div>
+        <script>
+            function myF(){
+            var em = document.getElementById("email").value;
+            var pswd = document.getElementById("pass").value;
+            if(em == "" || pswd == ""){
+                document.getElementById("demo1").innerHTML="fill out the field";
+                document.getElementById("demo1").style.color="red";
+                document.getElementById("email").style.border=" 2px solid red";
+
+            }
+            else if (pswd.length<8){
+                document.getElementById("demo2").innerHTML="password must be 8 charcters";
+                document.getElementById("demo2").style.color="red";
+                document.getElementById("pass").style.border=" 2px solid red";
+
+            }else if (pswd.search(/[a-z]/)== -1){
+                document.getElementById("demo2").innerHTML="password must contain one small letter";
+                document.getElementById("demo2").style.color="red";
+                document.getElementById("pass").style.border=" 2px solid red"
+            }else if (pswd.search(/[A-Z]/)== -1){
+                document.getElementById("demo2").innerHTML="password must be contain one capital letter";
+                document.getElementById("demo2").style.color="red";
+                document.getElementById("pass").style.border=" 2px solid red";
+
+            }else if (pswd.search(/[~!@#$%^&*<>?]/) ==-1){
+                document.getElementById("demo2").innerHTML="password must be contain one special character";
+                document.getElementById("demo2").style.color="red";
+                document.getElementById("pass").style.border=" 2px solid red";
+            } else  {
+                alert("you are successfully logined")
+                 }
+            }
+            function toggle(){
+                 var str = document.getElementById("pass");
+                 if(str.type == "text"){
+                     str.type = "password";
+                 }else{
+                     str.type = "text";
+                 }
+             }
+         </script>
+   </body>
+</html>

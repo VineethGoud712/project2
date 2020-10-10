@@ -1,0 +1,85 @@
+<html>
+<head>
+<style>
+html{
+background-image:url("C:/Users/vidya/Downloads/g.jpg");
+background-size:cover;
+}
+div{
+width:300px;
+height:500px;
+}
+input[type=text]{
+border:1px solid black;
+border-radius:50%;
+background-color:LightSteelBlue;
+color:black;
+width:100%;
+height:80px;
+font-size:40px;
+outline:none;
+}
+input[type=button]{
+boredr:3px solid yellow;
+border-radius:50%;
+background-color:lightblue;
+color:black;
+width:90px;
+height:70px;
+font-size:40px;
+box-shadow:2px;
+}
+table{border:none;}
+input:focus{outline:none;}
+palceholder{text-align:center;
+padding:2px;}
+</style> 
+</head>
+<body>
+<center>
+<p style="color:white; font-size:30px;">a simple calculater</p>
+<div>
+<table>
+<tr>
+<td colspan="3"><input type="text" id="result" placeholder="calculate"/></td>
+<td><input type="button" value="c" Onclick="clr();" style="background-color:orange";/></td>
+</tr>
+<tr>
+<td><input type="button" value="1" Onclick="dis('1');"/></td>
+<td><input type="button" value="2" Onclick="dis('2');"/></td>
+<td><input type="button" value="3" Onclick="dis('3');"/></td>
+<td><input type="button" value="/" Onclick="dis('/');" style="background-color:red";/></td>
+</tr>
+<tr>
+<td><input type="button" value="4" Onclick="dis('4');"/></td>
+<td><input type="button" value="5" Onclick="dis('5');"/></td>
+<td><input type="button" value="6" Onclick="dis('6');"/></td>
+<td><input type="button" value="-" Onclick="dis('-');" style="background-color:yellow";/></td>
+</tr>
+<tr>
+<td><input type="button" value="7" Onclick="dis('7');"/></td>
+<td><input type="button" value="8" Onclick="dis('8');"/></td>
+<td><input type="button" value="9" Onclick="dis('9');"/></td>
+<td><input type="button" value="+" Onclick="dis('+');" style="background-color:green";/></td>
+</tr>
+<tr>
+<td><input type="button" value="." Onclick="dis('.');" style="background-color:yellow";/></td>
+<td><input type="button" value="0" Onclick="dis('0');"/></td>
+<td><input type="button" value="=" Onclick="slove('=');" style="background-color:red";/></td>
+<td><input type="button" value="*" Onclick="dis('*');" style="background-color:tomato";/></td>
+</tr>
+</table>
+</div>
+</center>
+<script>
+alert("if you want the calculater\ press ok");
+function dis(val){document.getElementById("result").value+=val}
+function slove(){
+let x=document.getElementById("result").value
+let y=eval(x)
+document.getElementById("result").value=y
+}
+function clr(){document.getElementById("result").value=""}
+</script>
+</body>
+</html>
